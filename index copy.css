@@ -1,0 +1,173 @@
+h1 {
+	background-color: rgb(20, 35, 75);
+	width: 15%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: aliceblue;
+}
+.background {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url("https://pix4free.org/assets/library/2021-01-21/originals/case_study.jpg");
+	background-size: cover;
+	margin: -1%;
+}
+main {
+	margin-top: 1%;
+	margin-left: -0.5%;
+	margin-right: -0.5%;
+	background-color: aqua;
+}
+nav {
+	position: sticky;
+	top: 0px;
+	z-index: 100;
+}
+nav ol {
+	display: flex;
+	height: 50px;
+	list-style: none;
+	top: 0px;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: black;
+
+	li {
+		margin-right: 1%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: aquamarine;
+		width: 100px;
+		height: 30px;
+		border-radius: 5px;
+		a {
+			text-decoration: none;
+		}
+	}
+	li:hover {
+		background-color: aqua;
+	}
+}
+.pbox {
+	position: relative;
+	border-radius: 5px;
+}
+.pbox a {
+	background-color: rgb(26, 26, 97);
+	color: aliceblue;
+	text-decoration: none;
+	padding: 10px;
+}
+.pbox a:hover {
+	background-color: rgb(38, 38, 138);
+}
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+@media (min-width: 1000px) {
+	h2 {
+		margin-left: 5%;
+		background-color: rgb(20, 35, 75);
+		width: 15%;
+		height: 10%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: aliceblue;
+	}
+	.box:nth-child(even) > img {
+		order: 1;
+	}
+	.box:nth-child(even) > .pbox {
+		order: 2;
+		a {
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+		}
+	}
+
+	.boxs:nth-child(odd) > .box img {
+		order: 2;
+	}
+	.boxs:nth-child(odd) > .box .pbox {
+		order: 1;
+		a {
+			position: absolute;
+			right: auto;
+			left: 10px;
+			bottom: 10px;
+		}
+	}
+	.boxs {
+		padding-top: 20px;
+		padding-bottom: 80px;
+		.pbox {
+			width: 50vw;
+
+			background-color: aqua;
+			padding: 40px;
+			font-size: 22px;
+		}
+		img {
+			width: 35vw;
+			max-height: 40vh;
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.box {
+		flex-direction: column;
+	}
+
+	h2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 20vw;
+		height: 5vh;
+		background-color: rgb(20, 35, 75);
+		color: aliceblue;
+	}
+	.boxs {
+		height: 80vh;
+		padding-top: 20px;
+		.pbox {
+			width: 80vw;
+
+			background-color: aqua;
+			padding: 20px;
+			font-size: 20px;
+		}
+		img {
+			width: 80vw;
+			height: 30vh;
+		}
+	}
+	.box > .pbox {
+		order: 1;
+	}
+}
+img,
+p,
+h1,
+h2,
+a {
+	border-radius: 10px;
+}
+.boxs:nth-child(even) {
+	background-color: navy;
+}
+.boxs:nth-child(odd) {
+	background-color: lightblue;
+}
